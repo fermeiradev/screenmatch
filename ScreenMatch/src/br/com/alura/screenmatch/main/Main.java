@@ -22,8 +22,8 @@ public class Main {
         oPoderosoChefao.avalia(5);
         oPoderosoChefao.avalia(10);
 
-//        System.out.println(oPoderosoChefao.somaDasAvaliacoes);
-        //System.out.println(oPoderosoChefao.totalDeAvaliacoes);
+        // System.out.println(oPoderosoChefao.somaDasAvaliacoes);
+        // System.out.println(oPoderosoChefao.totalDeAvaliacoes);
         System.out.println("Total de avaliações: " + oPoderosoChefao.getTotalDeAvaliacoes());
         System.out.println(oPoderosoChefao.retornaMedia());
         System.out.println("Duração do filme: " + oPoderosoChefao.getDuracaoEmMinutos());

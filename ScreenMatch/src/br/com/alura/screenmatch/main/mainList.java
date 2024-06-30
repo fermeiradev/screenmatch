@@ -4,7 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulos;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class mainList {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class mainList {
         Serie lost = new Serie("Lost", 2000);
         lost.avalia(5);
 
-        ArrayList<Titulos> listaDeAssistidos = new ArrayList<>();
+        List<Titulos> listaDeAssistidos = new LinkedList<>();
         listaDeAssistidos.add(filmeDoFernando);
         listaDeAssistidos.add(oPoderosoChefao);
         listaDeAssistidos.add(avatar);
@@ -28,7 +28,27 @@ public class mainList {
             if (item instanceof Filme filme && item instanceof Serie serie) {
             System.out.println("Classificação " + filme.getClassificacao());
             }
-
         }
+        System.out.println();
+
+        List<String> buscaPorArtista = new LinkedList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Jacqueline");
+        System.out.println("Antes da ordenação");
+        System.out.println(buscaPorArtista);
+
+        System.out.println("Depois da ordenação");
+        Collections.sort(buscaPorArtista);
+        System.out.println(buscaPorArtista);
+
+        System.out.println("Lista de titulos ordenados");
+        Collections.sort(listaDeAssistidos);
+        System.out.println(listaDeAssistidos);
+        System.out.println("Orgadando por ano");
+        listaDeAssistidos.sort(Comparator.comparing(Titulos::getAnoDeLancamento));
+        System.out.println(listaDeAssistidos);
+
+
     }
 }
